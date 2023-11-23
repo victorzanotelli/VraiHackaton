@@ -33,14 +33,14 @@ USE `sdm`;
 
 DROP TABLE IF EXISTS `sdm`;
 CREATE TABLE IF NOT EXISTS `sdm` (
-                                     `id` int NOT NULL AUTO_INCREMENT,
-                                     `pseudo` varchar(25) NOT NULL,
-                                     `title` varchar(50) NOT NULL,
-                                     `story` varchar(500) NOT NULL,
-                                     `photo` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-                                     `love` int NOT NULL,
-                                     `no_love` int NOT NULL,
-                                     PRIMARY KEY (`id`)
+  `id` int NOT NULL AUTO_INCREMENT,
+  `pseudo` varchar(25) NOT NULL,
+  `title` varchar(50) NOT NULL,
+  `story` varchar(500) NOT NULL,
+  `photo` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `love` int NOT NULL,
+  `no_love` int NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `sdm` (
 --
 
 INSERT INTO `sdm` (`id`, `pseudo`, `title`, `story`, `photo`, `love`, `no_love`) VALUES
-    (1, 'toto', 'Lorem', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa est, aliquet sit amet imperdiet nec, mattis vitae lectus. Vestibulum dapibus nisl ac dui gravida, quis efficitur augue rhoncus. Donec rutrum ornare volutpat. Integer turpis sem, mollis finibus placerat eget, laoreet posuere leo. In hendrerit urna ante. Vestibulum dui felis, aliquet eget suscipit sed, hendrerit eget ligula. Mauris a orci nec odio maximus placerat. Quisque faucibus, urna in lacinia porta, libero quam nullam.', NULL, 0, 0);
+(1, 'toto', 'Lorem', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa est, aliquet sit amet imperdiet nec, mattis vitae lectus. Vestibulum dapibus nisl ac dui gravida, quis efficitur augue rhoncus. Donec rutrum ornare volutpat. Integer turpis sem, mollis finibus placerat eget, laoreet posuere leo. In hendrerit urna ante. Vestibulum dui felis, aliquet eget suscipit sed, hendrerit eget ligula. Mauris a orci nec odio maximus placerat. Quisque faucibus, urna in lacinia porta, libero quam nullam.', NULL, 0, 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
