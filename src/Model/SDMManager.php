@@ -22,8 +22,6 @@ class SDMManager extends AbstractManager
         $statement->bindValue(':photo', $credentials['photo'], \PDO::PARAM_STR);
         $statement->bindValue(':love', 0, \PDO::PARAM_INT);
         $statement->bindValue(':no_love', 0, \PDO::PARAM_INT);
-        //var_dump($credentials);
-        //die();
         $statement->execute();
     }
 }
