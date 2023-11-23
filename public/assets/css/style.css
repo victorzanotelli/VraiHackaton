@@ -1,4 +1,4 @@
-/** C S S  V A R I A B L E S **/
+/* C S S  V A R I A B L E S */
 :root{
     --font-color: #FDFDFF;
     --background: #333333;
@@ -8,7 +8,7 @@
     --font-family-autre: "Quicksand";
 }
 
-/** G O O G L E  F O N T **/
+/* G O O G L E  F O N T */
 /* Rokkit */
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@900&display=swap');
 /*Quicksand */
@@ -23,17 +23,17 @@
     border-style: none;
 }
 
-/** N A V B A R **/
+/* N A V B A R */
 body {
-    background-color: #333333;    
+    background-color: #333333;
 }
 
-nav { 
+nav {
     background-color: #800000;
-    height: 90px; line-height: 90px;    
+    height: 90px; line-height: 90px;
 }
 
-nav ul { 
+nav ul {
     display: flex;
     padding: 0;
     flex-direction: row;
@@ -51,25 +51,32 @@ img.logo {
 .toto{
     display: flex;
     justify-content: center;
+    text-align: center;
     font-size: 3rem;
     margin-top: 6rem;
+
+}
+
+h1 {
+    text-align: center;
+    color: var(--font-color)
 }
 
 h2{
     font-size: 2rem;
+    color: var(--font-color);
+    padding: 0.3rem;
 }
 
 form {
     text-align: center;
 }
 
-
 .formulaire{
     margin-top: 4rem;
     width: 50%;
     margin-left: 25rem;
 }
-
 .ajouter{
     display: flex;
     flex-direction: column;
@@ -77,5 +84,37 @@ form {
     text-align: center;
     justify-content: center;
     border-radius: 20px;
-    
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0.2rem;
+    color: var(--font-color);
+}
+
+input {
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+textarea {
+    border-radius: 5px;
+    text-align: center;
+    justify-content: center;
+    padding: 0.2rem;
+}
+
+input[type="submit"]{
+    padding: 0.5rem;
+    margin: 0.3rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #8f8d8d;
 }
