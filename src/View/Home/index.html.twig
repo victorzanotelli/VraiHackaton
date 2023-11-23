@@ -4,7 +4,7 @@
 	<h1 class="toto">Balance ton Santa</h1>
 	    <div class="formulaire">
         
-		<form action="" method="POST"class="ajouter">
+		<form action="" method="POST" class="ajouter">
             <h2>Ajouter votre SDM</h2></br>
             
                 <div>
@@ -20,8 +20,8 @@
                     <textarea name="msg" id="msg" cols="30" rows="10" maxlength="500" required="required"></textarea>*
                 </div>
                 <div>
-                    <label for="img">Choisir un fichier:</label>
-                    <input type="file" id="img" name="img" accept="image/png, image/jpeg, "/>
+                    <label for="image">Choisir un fichier:</label>
+                    <input type="text" id="image" name="img" accept="image/png, image/jpeg, "/>
                 </div>
                 <div>
                     <input type="submit" value="Envoyer">
@@ -40,5 +40,5 @@
             <footer>{{ user.story }}</footer>
         </article>
     {% endfor %}
-
 {% endblock %}
+
