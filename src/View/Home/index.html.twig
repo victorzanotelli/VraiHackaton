@@ -3,10 +3,10 @@
 {% block content %}
 	<h1 class="toto">Balance ton Santa</h1>
 	    <div class="formulaire">
-        
+
 		<form action="" method="POST" class="ajouter">
             <h2>Ajouter votre SDM</h2></br>
-            
+
                 <div>
                     <label for="pseudo" >Pseudo :</label>
                     <input type="text" name="pseudo" id="pseudo"placeholder="Pseudo" required="required">
@@ -20,19 +20,15 @@
                     <textarea name="msg" id="msg" cols="30" rows="10" maxlength="500" required="required"></textarea>*
                 </div>
                 <div>
-                    <label for="image">Choisir un fichier:</label>
-                    <input type="text" id="image" name="img" accept="image/png, image/jpeg, "/>
-                </div>
-                <div>
                     <input type="submit" value="Envoyer">
                 </div>
                 <input type="hidden" id="love" name="love" value= 0>
                 <input type="hidden" id="no_love" name="no_love" value= 0>
             </div>
 	    </form>
-    
+
     </div>
-    
+
     {% for post in posts %}
         <article>
             <header>{{ post.pseudo }}</header>
