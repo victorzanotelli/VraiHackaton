@@ -1,6 +1,5 @@
 {% extends 'layout.html.twig' %}
 
-
 {% block content %}
 	<h1 class="toto">Balance ton Santa</h1>
 	    <div class="formulaire">
@@ -27,10 +26,19 @@
                 <div>
                     <input type="submit" value="Envoyer">
                 </div>
+                <input type="hidden" id="love" name="love" value= 0>
+                <input type="hidden" id="no_love" name="no_love" value= 0>
             </div>
 	    </form>
     
     </div>
-
+    
+    {% for post in posts %}
+        <article>
+            <header>{{ post.pseudo }}</header>
+            <img src="{{ post.photo }}" alt="Photo de {{ post.pseudo }}">
+            <footer>{{ user.story }}</footer>
+        </article>
+    {% endfor %}
 
 {% endblock %}
