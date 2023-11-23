@@ -1,11 +1,15 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+    <form>
+        <div>
+            <input type="submit" value="Envoyer">
+        </div>
+    </form>
     {% for post in posts %}
         <article>
             <header>{{ post.pseudo }}</header>
-            <img src="{{ post.photo }}" alt="Photo de {{ post.pseudo }}">
-            <footer>{{ user.story }}</footer>
+            <footer>{{ post.story }}</footer>
         </article>
     {% endfor %}
 {% endblock %}

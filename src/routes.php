@@ -1,8 +1,8 @@
 <?php
 
 return [
-    '' => ['SDMController', 'contentCreator',],
-    'items' => ['SDMController', 'contentIndex',['id']],
+    '' => ['SDMController', 'contentIndex',['id']],
+    'addSdm' => ['SDMController', 'contentCreator',['id']],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
