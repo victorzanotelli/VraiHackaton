@@ -6,7 +6,7 @@ use App\Model\AbstractManager;
 
 class SDMManager extends AbstractManager
 {
-    public const TABLE = 'SDM';
+    public const TABLE = 'sdm';
 
 
     public function insert(array $credentials)
@@ -20,8 +20,8 @@ class SDMManager extends AbstractManager
         $statement->bindValue(':title', $credentials['title'], \PDO::PARAM_STR);
         $statement->bindValue(':story', $credentials['story'], \PDO::PARAM_STR);
         $statement->bindValue(':photo', $credentials['photo'], \PDO::PARAM_STR);
-        $statement->bindValue(':love', $credentials['love'], \PDO::PARAM_INT);
-        $statement->bindValue(':no_love', $credentials['no_love'], \PDO::PARAM_INT);
+        $statement->bindValue(':love', 0, \PDO::PARAM_INT);
+        $statement->bindValue(':no_love', 0, \PDO::PARAM_INT);
         //var_dump($credentials);
         //die();
         $statement->execute();

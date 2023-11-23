@@ -45,12 +45,8 @@
     {% for post in posts %}
         <article>
             <header>{{ post.pseudo }}</header>
-            <img src="{{ post.photo }}" alt="Photo de {{ psot.pseudo }}">
+            <img src="{{ post.photo }}" alt="Photo de {{ post.pseudo }}">
             <footer>{{ user.story }}</footer>
         </article>
-        <form class='like' action="" method="post">
-            <input type="hidden" name="targetId" value={{user.id}}>
-            <input type="submit" value= 1>
-        </form>
     {% endfor %}
 {% endblock %}
