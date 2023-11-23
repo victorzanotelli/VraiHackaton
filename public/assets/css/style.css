@@ -56,6 +56,7 @@ img.bts {
 img.logo {
     border: none;
     width: 200px;
+
 }
 
 img.sdm {
@@ -63,6 +64,41 @@ img.sdm {
     width: 150px;
 }
 
+
+
+
+.toto{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-top: 6rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
 form {
     text-align: center;
 }
+
+
+.formulaire{
+    margin-top: 4rem;
+    width: 50%;
+    margin-left: 25rem;
+}
+
+.ajouter{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-div);
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+}
+
+
+
+
