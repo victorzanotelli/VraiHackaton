@@ -9,6 +9,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
+        "happyworm/jPlayer": "2.*",
         "twig/twig": "^3.5.1",
         "ext-pdo": "*"
     },
@@ -25,6 +26,7 @@
         }
     },
     "config": {
+        "component-dir": "your/desired/asset/path",
         "allow-plugins": {
             "phpro/grumphp": true
         }
