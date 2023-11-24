@@ -7,21 +7,21 @@
         </div>
     
     {% for post in posts %}
-    
-       <div class="sdm-post">
-        <div class="sdm-header">
-            <h2>{{ post.title }}</h2>
-            <p>{{ post.pseudo }}</p>
-        </div>
-        <div class="sdm-content">
-            <p>{{ post.story }}</p>
-        </div>
-        <div class='like' action="" method="post">
-            <input type="hidden" name="targetId" value={{post.id}}>
-            <input type="submit" value="C'est une SDM {{ post.love }}">
-        </div>
-    </div>    
-
+        <article>
+            <header>{{ post.pseudo }}</header>
+            <div>{{ post.story }}</div>
+            <footer>
+                <form class='like' action="" method="post">
+                    <input type="hidden" name="targetId" value={{post.id}}>
+                    <input type="submit" value="noel de merde {{ post.love }}">
+                    <section id="post-button-section" class="post-button-section">
+                        <div class="find-button">
+                            <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' class="btn-meet"><input type="button" id="c'est nul !"  value="c'est nul !" name="c'est nul!"></a>
+                        </div>
+                    </section>
+                </form>
+            </footer>
+        </article>
     {% endfor %}
 
 {% endblock %}
