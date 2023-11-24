@@ -21,16 +21,16 @@ SET time_zone = "+00:00";
 -- Base de données : `ppvufssr_smd`
 --
 
-CREATE DATABASE smd;
-USE smd;
+CREATE DATABASE sdm;
+USE sdm;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `smd`
+-- Structure de la table `sdm`
 --
 
-CREATE TABLE `smd` (
+CREATE TABLE `sdm` (
   `id` int(11) NOT NULL,
   `pseudo` varchar(25) NOT NULL,
   `title` varchar(50) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `smd` (
 -- Déchargement des données de la table `smd`
 --
 
-INSERT INTO `smd` (`id`, `pseudo`, `title`, `story`, `love`, `no_love`) VALUES
+INSERT INTO `sdm` (`id`, `pseudo`, `title`, `story`, `love`, `no_love`) VALUES
 (1, 'toto', 'l\'Amelanchier', 'Sous l\'Amelanchier, j\'me retrouve seul à glander. Noël, c\'est juste une occasion de se rappeler que ma famille, c\'est du passé. L\'arbre, c\'est là où je cache mes clopes et mes regrets. Les boules brillent, mais moi, je suis dans l\'ombre.', 0, 0),
 (2, 'titi', 'Ce triphosphate', 'Au labo, avec ce triphosphate chelou, je regarde les lumières de Noël. Ma famille ? Ouais, loin derrière. Les rires ? Des souvenirs qu\'on a mis au congélo. Noël, c\'est juste un jour de plus, mais avec des décorations inutiles.', 0, 0),
 (3, 'tutu', 'Pétrichor', 'Collé à la fenêtre, je respire le Pétrichor et me souviens d\'elle. Noël, c\'est devenu un foutu terrain de guerre. Les gouttes tombent, comme mes larmes. La magie ? Elle est partie avec elle. Noël, ça pue la solitude et le passé qui colle comme la pluie.', 0, 0),
@@ -56,7 +56,7 @@ INSERT INTO `smd` (`id`, `pseudo`, `title`, `story`, `love`, `no_love`) VALUES
 --
 -- Index pour la table `smd`
 --
-ALTER TABLE `smd`
+ALTER TABLE `sdm`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -66,7 +66,7 @@ ALTER TABLE `smd`
 --
 -- AUTO_INCREMENT pour la table `smd`
 --
-ALTER TABLE `smd`
+ALTER TABLE `sdm`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
