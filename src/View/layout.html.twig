@@ -2,7 +2,7 @@
 
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/assets/images/favicon.png">
@@ -26,5 +26,14 @@
 
 {% block content %}{% endblock %}
 {% block javascript %}{% endblock %}
+<footer class="menuFooter">
+    <p class="kitouchki">In partnership with KITOUCHKI</p>
+    {% block footer %}
+        <ul>
+            <li><img class="kit" src="https://i.goopics.net/99mtne.png"></li>
+        </ul>
+    {% endblock %}
+</footer>
+
 </body>
 </html>
