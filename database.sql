@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 23 nov. 2023 à 11:12
--- Version du serveur : 8.0.34
--- Version de PHP : 8.0.26
+-- Généré le : ven. 24 nov. 2023 à 13:59
+-- Version du serveur : 10.5.21-MariaDB
+-- Version de PHP : 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,37 +18,56 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `sdm`
+-- Base de données : `ppvufssr_smd`
 --
 
-DROP DATABASE IF EXISTS `sdm`;
-CREATE DATABASE IF NOT EXISTS `sdm`;
-USE `sdm`;
+CREATE DATABASE smd;
+USE smd;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `sdm`
+-- Structure de la table `smd`
 --
 
-DROP TABLE IF EXISTS `sdm`;
-CREATE TABLE IF NOT EXISTS `sdm` (
-  `id` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `smd` (
+  `id` int(11) NOT NULL,
   `pseudo` varchar(25) NOT NULL,
   `title` varchar(50) NOT NULL,
   `story` varchar(500) NOT NULL,
-  `photo` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `love` int NOT NULL,
-  `no_love` int NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `love` int(11) NOT NULL,
+  `no_love` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Déchargement des données de la table `sdm`
+-- Déchargement des données de la table `smd`
 --
 
-INSERT INTO `sdm` (`id`, `pseudo`, `title`, `story`, `photo`, `love`, `no_love`) VALUES
-(1, 'toto', 'Lorem', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum massa est, aliquet sit amet imperdiet nec, mattis vitae lectus. Vestibulum dapibus nisl ac dui gravida, quis efficitur augue rhoncus. Donec rutrum ornare volutpat. Integer turpis sem, mollis finibus placerat eget, laoreet posuere leo. In hendrerit urna ante. Vestibulum dui felis, aliquet eget suscipit sed, hendrerit eget ligula. Mauris a orci nec odio maximus placerat. Quisque faucibus, urna in lacinia porta, libero quam nullam.', NULL, 0, 0);
+INSERT INTO `smd` (`id`, `pseudo`, `title`, `story`, `love`, `no_love`) VALUES
+(1, 'toto', 'l\'Amelanchier', 'Sous l\'Amelanchier, j\'me retrouve seul à glander. Noël, c\'est juste une occasion de se rappeler que ma famille, c\'est du passé. L\'arbre, c\'est là où je cache mes clopes et mes regrets. Les boules brillent, mais moi, je suis dans l\'ombre.', 0, 0),
+(2, 'titi', 'Ce triphosphate', 'Au labo, avec ce triphosphate chelou, je regarde les lumières de Noël. Ma famille ? Ouais, loin derrière. Les rires ? Des souvenirs qu\'on a mis au congélo. Noël, c\'est juste un jour de plus, mais avec des décorations inutiles.', 0, 0),
+(3, 'tutu', 'Pétrichor', 'Collé à la fenêtre, je respire le Pétrichor et me souviens d\'elle. Noël, c\'est devenu un foutu terrain de guerre. Les gouttes tombent, comme mes larmes. La magie ? Elle est partie avec elle. Noël, ça pue la solitude et le passé qui colle comme la pluie.', 0, 0),
+(4, 'tata', 'Noël', 'Le cadeau que j\'ai ouvert ce Noël-là était une claque. Un bouquin sur la solitude. J\'ai essayé de sourire, mais sérieux, qui offre ça comme cadeau? Ce Noël, c\'était comme si quelqu\'un m\'avait envoyé un message subtil : T\'es seul, mec, et ça changera pas.', 0, 0);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `smd`
+--
+ALTER TABLE `smd`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `smd`
+--
+ALTER TABLE `smd`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
