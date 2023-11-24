@@ -1,14 +1,27 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <form method="post">
-        <button>Submit</button>
-    </form>
+    
+        <div class="find-button">
+             <button><a href='/addSdm'>Partager une SDM</a></button>
+        </div>
+    
     {% for post in posts %}
-        <article>
-            <header>{{ post.pseudo }}</header>
-            <footer>{{ post.story }}</footer>
-        </article>
-    {% endfor %}
-{% endblock %}
+    
+       <div class="sdm-post">
+        <div class="sdm-header">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.pseudo }}</p>
+        </div>
+        <div class="sdm-content">
+            <p>{{ post.story }}</p>
+        </div>
+        <div class='like' action="" method="post">
+            <input type="hidden" name="targetId" value={{post.id}}>
+            <input type="submit" value="C'est une SDM {{ post.love }}">
+        </div>
+    </div>    
 
+    {% endfor %}
+
+{% endblock %}
