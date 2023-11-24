@@ -9,8 +9,13 @@
     {% for post in posts %}
         <article>
             <header>{{ post.pseudo }}</header>
-            <footer>{{ post.story }}</footer>
+            <div>{{ post.story }}</div>
+            <footer>
+                <form class='like' action="" method="post">
+                    <input type="hidden" name="targetId" value={{post.id}}>
+                    <input type="submit" value={{ post.love }}>
+                </form>
+            </footer>
         </article>
     {% endfor %}
 {% endblock %}
-
