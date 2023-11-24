@@ -26,7 +26,9 @@ class SDMManager extends AbstractManager
 
     public function love($data): bool
     {
+
         $stmt = $this->pdo->prepare(" UPDATE " . static::TABLE . "SET love = love + 1 WHERE id = :targetId");
+
         $stmt->bindValue(':targetId', $data['targetId'], PDO::PARAM_INT);
         return $stmt->execute();
     }
