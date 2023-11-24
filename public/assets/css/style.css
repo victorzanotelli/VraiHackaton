@@ -117,7 +117,7 @@ input[type="submit"]{
 
 input[type="submit"]:hover {
     background-color: #8f8d8d;
-
+}
 /**FOOTER**/
 
 .menuFooter {
@@ -181,34 +181,4 @@ footer ul li {
     align-items: center;
     padding-top: 150px;
     height: 20px;
-}
-
-button {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    text-decoration: none;
-    flex-direction: column;
-    font-weight: bold;
-    border-radius: 20px; 
-    margin: 0.6rem; 
-    padding: 0.6rem; 
-    border: none;
-    max-height: 120px;
-}
-
-input {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    text-decoration: none;
-    flex-direction: column;
-    font-weight: bold;
-    border-radius: 20px; 
-    margin: 0.6rem; 
-    padding: 0.6rem; 
-    border: none;
-    max-height: 120px;
 }
