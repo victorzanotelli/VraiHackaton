@@ -2,7 +2,7 @@
 
 <html lang="fr">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/assets/images/favicon.png">
@@ -25,31 +25,15 @@
 {% endblock %}
 
 {% block content %}{% endblock %}
-
-
-{% block javascript %}
-$(document).ready(function() {
-
-    $("#jquery_jplayer_1").jPlayer({
-        ready: function(event) {
-            $(this).jPlayer("setMedia", {
-                title: "Bubble",
-                m4a: "Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition).mp3",
-                oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-            });
-        },
-        swfPath: "http://jplayer.org/latest/dist/jplayer",
-        supplied: "mp3, oga",
-        wmode: "window",
-        useStateClassSkin: true,
-        autoBlur: false,
-        smoothPlayBar: true,
-        keyEnabled: true,
-        remainingDuration: true,
-        toggleDuration: true
-    });
-});
-
-{% endblock %}
+{% block javascript %}{% endblock %}
+{% block javascript %}{% endblock %}
+<footer class="menuFooter">
+    <p class="kitouchki">In partnership with KITOUCHKI</p>
+    {% block footer %}
+        <ul>
+            <li><img class="kit" src="https://i.goopics.net/99mtne.png"></li>
+        </ul>
+    {% endblock %}
+</footer>
 </body>
 </html>

@@ -13,7 +13,7 @@ class SDMManager extends AbstractManager
     {
         $statement = $this->pdo->prepare(
             "INSERT INTO " . static::TABLE .
-                "(`pseudo`, `title`, `story`,`love`,`no_love`)
+                "(`pseudo`, `title`, `story`,`love`, no_love`)
             VALUES(:pseudo, :title, :story, :love, :no_love) "
         );
         $statement->bindValue(':pseudo', $credentials['pseudo'], \PDO::PARAM_STR);
@@ -26,9 +26,9 @@ class SDMManager extends AbstractManager
 
     public function love($data): bool
     {
-        $stmt = $this->pdo->prepare(
-            "UPDATE " . static::TABLE . " SET love = love + 1 WHERE id = :targetId"
-        );
+
+        $stmt = $this->pdo->prepare(" UPDATE " . static::TABLE . "SET love = love + 1 WHERE id = :targetId");
+
         $stmt->bindValue(':targetId', $data['targetId'], PDO::PARAM_INT);
         return $stmt->execute();
     }
