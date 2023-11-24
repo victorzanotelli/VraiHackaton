@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use App\Model\AbstractManager;
+use pdo;
 
 class SDMManager extends AbstractManager
 {
@@ -21,5 +22,14 @@ class SDMManager extends AbstractManager
         $statement->bindValue(':love', 0, \PDO::PARAM_INT);
         $statement->bindValue(':no_love', 0, \PDO::PARAM_INT);
         $statement->execute();
+    }
+
+    public function love($data): bool
+    {
+        $stmt = $this->pdo->prepare(
+            "UPDATE " . static::TABLE . " SET love = love + 1 WHERE id = :targetId"
+        );
+        $stmt->bindValue(':targetId', $data['targetId'], PDO::PARAM_INT);
+        return $stmt->execute();
     }
 }

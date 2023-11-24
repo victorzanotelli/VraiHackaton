@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Controller\AbstractController;
 use App\Model\SDMManager;
-use App\Model\UserManager;
 
 class SDMController extends AbstractController
 {
@@ -25,6 +24,11 @@ class SDMController extends AbstractController
     {
         $contentManager = new SDMManager();
         $posts = $contentManager->selectAll();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $data = $_POST;
+            $sdm = new SDMManager();
+            $sdm->love($data);
+        }
         return $this->twig->render('Home/index.html.twig', ['posts' => $posts]);
     }
 }
