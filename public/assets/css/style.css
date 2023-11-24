@@ -79,3 +79,76 @@ form {
     border-radius: 20px;
     
 }
+
+/*************Carte**********/
+
+.sdm-post {
+    height: 240px;
+    width: 1000px;
+    margin: 20px auto;
+    background-color: #4D4C50;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.sdm-header {
+    margin-bottom: 25px;
+}
+
+.sdm-header h2 {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.sdm-header p {
+    color: #ffffff;
+    margin: 5px 0 0;
+    padding: 5px;
+}
+
+.sdm-content {
+    color: #ffffff;
+    font-size: 17px;
+}
+  
+/*********Bouton SDM*********/
+
+.find-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    height: 20px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: column;
+    font-weight: bold;
+    border-radius: 20px; 
+    margin: 0.6rem; 
+    padding: 0.6rem; 
+    border: none;
+    max-height: 120px;
+}
+
+input {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: column;
+    font-weight: bold;
+    border-radius: 20px; 
+    margin: 0.6rem; 
+    padding: 0.6rem; 
+    border: none;
+    max-height: 120px;
+}
